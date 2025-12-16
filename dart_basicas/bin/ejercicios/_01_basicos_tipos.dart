@@ -6,23 +6,27 @@ void main() {
   print('--- COMPROBACIÓN DE RESULTADOS ---\n');
 
   // Test Ejercicio 1
-  print('1. Interpolación: ${crearSaludo('Keneth', 26)}'); 
+  print('1. Interpolación: ${crearSaludo('Keneth', 26)}');
   // Esperado: "Hola Keneth, el próximo año tendrás 27 años."
 
   // Test Ejercicio 2
-  print('2. Temperaturas: ${convertirFahrenheitACelsius(68)}'); 
+  print('2. Temperaturas: ${convertirFahrenheitACelsius(68)}');
   // Esperado: 20.0
 
   // Test Ejercicio 3
-  print('3. Null Safety (Con valor): ${formatearNombre('Daniel')}'); // Esperado: "DANIEL"
-  print('3. Null Safety (Nulo):      ${formatearNombre(null)}');     // Esperado: "ANÓNIMO"
+  print(
+    '3. Null Safety (Con valor): ${formatearNombre('Daniel')}',
+  ); // Esperado: "DANIEL"
+  print(
+    '3. Null Safety (Nulo):      ${formatearNombre(null)}',
+  ); // Esperado: "ANÓNIMO"
 
   // Test Ejercicio 4
-  print('4. Parseo Seguro: ${sumarPrecios('100', '200')}');       // Esperado: 300
-  print('4. Parseo Seguro: ${sumarPrecios('100', 'hola')}');      // Esperado: 100
+  print('4. Parseo Seguro: ${sumarPrecios('100', '200')}'); // Esperado: 300
+  print('4. Parseo Seguro: ${sumarPrecios('100', 'hola')}'); // Esperado: 100
 
   // Test Ejercicio 5
-  print('5. Fechas (Edad): ${calcularEdad(1990)}'); 
+  print('5. Fechas (Edad): ${calcularEdad(1990)}');
   // Esperado: La edad actual (ej. 33, 34 o 35 dependiendo del año actual)
 }
 
@@ -32,8 +36,8 @@ void main() {
 // Objetivo: Retornar un String que diga: "Hola [nombre], el próximo año tendrás [edad + 1] años."
 // Pista: Usa ${} para la operación matemática dentro del texto.
 String crearSaludo(String nombre, int edad) {
-  // TU CÓDIGO AQUÍ:  
-  return 'Hola $nombre, el proximo año tendras ${edad + 1}'; 
+  // TU CÓDIGO AQUÍ:
+  return 'Hola $nombre, el proximo año tendras ${edad + 1}';
 }
 
 // EJERCICIO 2: Tipos Numéricos (double)
@@ -52,7 +56,7 @@ double convertirFahrenheitACelsius(double fahrenheit) {
 // Pista: Puedes usar if/else o el operador ??
 String formatearNombre(String? nombre) {
   // TU CÓDIGO AQUÍ:
-  
+
   return nombre?.toUpperCase() ?? 'ANONIMO';
 }
 
