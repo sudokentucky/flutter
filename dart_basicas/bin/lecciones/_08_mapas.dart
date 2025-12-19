@@ -59,15 +59,9 @@ void main(){
 
   print(producto);
 
-// ... (Lo que ya tenías arriba) ...
-
-  print('\n--- EXTENSIÓN: USO AVANZADO ---\n');
-
-  // ============================================
-  // 6. ADD ALL (Fusionar Mapas)
-  // ============================================
-  // Sirve para unir dos objetos. 
-  // IMPORTANTE: Si las claves se repiten, el mapa que agregas SOBREESCRIBE al original.
+  //add all
+  // sirve para unir dos objetos. 
+  //Si las claves se repiten, el mapa que agregas va a sobreescribir al original.
   
   Map<String, dynamic> datosBasicos = {
     'nombre': 'Keneth', 
@@ -75,21 +69,19 @@ void main(){
   };
   
   Map<String, dynamic> datosActualizados = {
-    'rol': 'Admin', // Clave repetida (ganará esta)
+    'rol': 'Admin', // Clave repetida (esta quedara)
     'activo': true  // Clave nueva
   };
   
-  // Fusionamos 'datosActualizados' DENTRO de 'datosBasicos'
+  // Fusionamos 'datosActualizados' en 'datosBasicos'
   datosBasicos.addAll(datosActualizados);
   
   print('6. Mapa Fusionado: $datosBasicos'); 
   // Resultado: {nombre: Keneth, rol: Admin, activo: true}
 
 
-  // ============================================
-  // 7. JSON ANIDADO (Mapas dentro de Mapas)
-  // ============================================
-  // Así se ve una respuesta real de una API:
+  //json anidado un mapa dentro de un mapa (s)
+  // esto seria una respuesta real de una API:
   Map<String, dynamic> perfil = {
     'id': 100,
     'contacto': {
