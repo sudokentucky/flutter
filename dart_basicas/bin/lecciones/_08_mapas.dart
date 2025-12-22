@@ -76,7 +76,7 @@ void main(){
   // Fusionamos 'datosActualizados' en 'datosBasicos'
   datosBasicos.addAll(datosActualizados);
   
-  print('6. Mapa Fusionado: $datosBasicos'); 
+  print('Mapa Fusionado: $datosBasicos'); 
   // Resultado: {nombre: Keneth, rol: Admin, activo: true}
 
 
@@ -97,7 +97,7 @@ void main(){
   // Funciona si estás 100% seguro de que todo existe.
   // Dart permite encadenar corchetes porque son 'dynamic'.
   String ciudad = perfil['contacto']['direccion']['ciudad'];
-  print('7. Ciudad (Directo): $ciudad');
+  print('Ciudad (Directo): $ciudad');
 
 
   // --- FORMA 2: Acceso Seguro (Recomendado) ---
@@ -116,7 +116,7 @@ void main(){
   // "Intenta entrar a contacto, si existe, intenta entrar a direccion..."
   var calleSegura = perfilIncompleto['contacto']?['direccion'];
   
-  print('7. Acceso Seguro (Null): $calleSegura'); // Imprime null (no explota)
+  print('Acceso Seguro (Null): $calleSegura'); // Imprime null (no explota)
 
 
 }
